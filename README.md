@@ -29,11 +29,11 @@ f=a*b #곱셈
 g=a**b #제곱
 print(c,d,e,f,g)
 ~~~
-문자열
-큰 따옴표 : "Hello World! It's"
-작은 따옴표 : '대한민국'
-큰따옴표 3 : """Hello!"""
-작은 따옴표 3 : '''Life is too short, You need python'''
+##### 문자열\
+큰 따옴표 : "Hello World! It's"\
+작은 따옴표 : '대한민국'\
+큰따옴표 3 : """Hello!"""\
+작은 따옴표 3 : '''Life is too short, You need python'''\
 ~~~
 myName = "Seung Jun" #카멜
 my_name = "이승준" #스네이크
@@ -50,7 +50,7 @@ print(myStr,myNum)
 print(type(myStr))
 print(type(myNum))
 ~~~
-여러개 변수 할당
+###### 여러개 변수 할당
 ~~~
 x,y,z = "포도","딸기","수박"
 print(x)
@@ -84,10 +84,10 @@ c = 3
 print(a,b,c)
 print(a+b+c)
 ~~~
-데이터유형
-텍스트
-숫자
-불(bool)
+####### 데이터유형\
+텍스트\
+숫자\
+불(bool)\
 ~~~
 a=100
 b=200
