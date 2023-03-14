@@ -17,3 +17,55 @@ c=a+b
 d=b-a
 print(c,d)
 ~~~
+~~~
+a=10
+b=3
+#나눗셈
+c=a/b  #나눗셈
+d=a//b #몫
+e=a%b #나머지
+#곱셈
+f=a*b #곱셈
+g=a**b #제곱
+print(c,d,e,f,g)
+~~~
+문자열
+큰 따옴표 : "Hello World! It's"
+작은 따옴표 : '대한민국'
+큰따옴표 3 : """Hello!"""
+작은 따옴표 3 : '''Life is too short, You need python'''
+~~~
+myName = "Seung Jun" #카멜
+my_name = "이승준" #스네이크
+MyName = 'jiji' #파스칼
+_my_name = "korea"
+MYNAME = "God is love"
+my2name = "12345"
+# 2myname = '9874'
+# my-name = "michle"
+# my name = "kiki"
+myStr = '123'#Str
+myNum = 123#int
+print(myStr,myNum)
+print(type(myStr))
+print(type(myNum))
+~~~
+여러개 변수 할당
+~~~
+x,y,z = "포도","딸기","수박"
+print(x)
+print(y)
+print(z)
+~~~
+~~~
+a = b = c = "오렌지"
+print(a)
+print(b)
+print(c)
+~~~
+fruits = ["포도","딸기","수박"]
+x,y,z = fruits
+print(x)
+print(y)
+print(z)
+~~~
