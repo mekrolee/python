@@ -4,7 +4,7 @@
 정수:123,-20,0\
 실수:123.45,-432.5,6.08\
 8진수:0o432,0o556\
-16진수:0xff,0x00,0x0a\
+16진수:0xff,0x00,0x0a
 #### 변수  
 문자 또는 밑줄로 시작(beta,_kim)\
 대소문자를 구분(sum,Sum,SUM)\
@@ -33,7 +33,7 @@ print(c,d,e,f,g)
 큰 따옴표 : "Hello World! It's"\
 작은 따옴표 : '대한민국'\
 큰따옴표 3 : """Hello!"""\
-작은 따옴표 3 : '''Life is too short, You need python'''\
+작은 따옴표 3 : '''Life is too short, You need python'''
 ~~~
 myName = "Seung Jun" #카멜
 my_name = "이승준" #스네이크
