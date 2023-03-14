@@ -63,9 +63,42 @@ print(a)
 print(b)
 print(c)
 ~~~
+~~~
 fruits = ["포도","딸기","수박"]
 x,y,z = fruits
 print(x)
 print(y)
 print(z)
+~~~
+~~~
+x = "Life"
+y = "is"
+z = "Beautiful"
+print(x,y,z)
+print(x+y+z)
+~~~
+~~~
+a = 1
+b = 2
+c = 3
+print(a,b,c)
+print(a+b+c)
+~~~
+데이터유형
+텍스트
+숫자
+불(bool)
+~~~
+a=100
+b=200
+result=a+b
+print(a,'+',b,'=',result)
+~~~
+~~~
+a=15
+b=5
+result=a//b
+result2=a%b
+print(a,'//',b,'=',result)
+print(a,'%',b,'=',result2)
 ~~~
