@@ -371,3 +371,259 @@ print(L)
 L. remove(3) #해당 요소값 삭제
 print(L)
 ~~~
+~~~
+k = ['a', 'b', 'c', 'd']
+k. remove('d')
+print(k)
+~~~
+~~~
+k = "God is love"
+print(k[:3])
+print(k[6:])
+print(k[-7:-2])
+~~~
+~~~
+k = " God is love "
+print(k.upper())
+print(k.lower())
+print(k.strip())
+~~~
+~~~
+a = " God, is, love "
+print(a. split(","))
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+a. append ("orange") #맨뒤 추가
+print(a)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+a. insert(1, "orage") #지정된 곳 삽입
+print(a)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+a. remove("banana")
+print(a)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+a. pop(0) #지정된 곳 제거
+print(a)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+a. pop() # 맨뒤 제거
+print(a)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+del a[0]
+print(a)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+a. clear() # 목록 전체 제거
+print(a)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+for x in a: # a안의 인덱스 값 정렬
+  print(x)
+~~~
+~~~
+a = ["apple", "banana", "cherry"]
+for i in range (len(a)): # a안의 랭스 정렬
+  print(a)
+~~~
+### SORT
+~~~
+a = [1, 3, 5, 7, 9, 0, 1, 6]
+a. sort() # 순서 정렬
+print(a)
+a. sort(reverse=True) # 역순서 정렬
+print(a)
+~~~
+~~~
+a = ["apple", "Banana", "durian", "cherry", "Orange"]
+a. sort() # 대소문자 구분 정렬
+print(a)
+a.sort(key=str.lower) # 대소문자 구분 x
+print(a)
+a. reverse() # 역순서 정렬
+print(a)
+~~~
+~~~
+a = ["apple", "Banana", "durian", "cherry", "Orange"]
+mylist = a.copy() # 복사 붙이기
+print(mylist)
+cplist = list (a) # 복사 붙이기(함수)
+print(cplist)
+~~~
+### Tuple
+~~~
+l = [1, 2, 3] # list → 대괄호
+t = (1, 2, 3) # tuple → 소괄호
+l[0] = 5 # 변경 가능
+print(l) 
+t[0] = 1 # 변경 불가능 / 프로그램 돌릴시 에러 
+print(t)
+~~~
+~~~
+a = ["apple", "Banana", "durian", "cherry", "Orange"]
+print(len(a))
+~~~
+~~~
+t = ("apple",) # tuple → 랭스안에 , 참조
+print(t)
+l = ("banana")
+print(l)
+print(type(t), type(l))
+~~~
+~~~
+a = ("apple", "Banana", "durian", "cherry", "Orange")
+print(a[:4])
+print(a[3:])
+~~~
+~~~
+a = ("apple", "Banana", "durian", "cherry", "Orange")
+if "apple" in t:
+  print("Yap, 'apple' is coming")
+~~~
+### list ↔ Tuple
+~~~
+firm = ['Messi', 'Suarez', 'Naymar']
+tdata = tuple(firm) # list ↔ tuple 변환 함수
+print(tdata)
+print(firm)
+~~~
+~~~
+# 시험 출제 up up up up up up up
+t = ('Messi', 'Suarez', 'Naymar', 'XAVI', 'Inesta', 'Busquets')
+l = list(t)
+l. append("Puyol")
+t = tuple(l)
+print(t)
+~~~
+~~~
+t = ('Messi', 'Suarez', 'Naymar', 'XAVI', 'Inesta', 'Busquets')
+q = ("Puyol",)
+t += q
+print(t)
+~~~
+~~~
+t = ('Messi', 'Suarez', 'Naymar', 'XAVI', 'Inesta', 'Busquets')
+q = list(t)
+q.remove('Busquets')
+t = tuple(q)
+print(t)
+del (t) # 제거 가능
+~~~
+### dict (사전자료)
+~~~
+d = {
+    'a':1,
+     'b':2,
+     'c':3
+}
+print(d)
+print(d.keys()) # 서식 지정
+print(d.values()) # 값 지정
+print(d.items()) # 서식, 값 지정
+~~~
+~~~
+# 항목 추가
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+print(soccer)
+print(len(soccer))
+soccer["position"] = "midfilder" # 추가시 대괄호 사용
+print(soccer)
+soccer["team"]="pari saint german"
+print(soccer)
+soccer. update({"old":38}) # update 함수 사용 추가
+print(soccer)
+~~~
+~~~
+# 항목 제거
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+soccer.pop("team")
+print(soccer)
+~~~
+~~~
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+soccer.popitem()
+print(soccer)
+~~~
+~~~
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+soccer.clear() # 비움
+del soccer
+~~~
+~~~
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+for x in soccer: # 값 출력
+  print(soccer[x])
+~~~
+~~~
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+for x in soccer. values(): # 값
+  print(x)
+for x in soccer. keys():  # 서식
+  print(x)
+~~~
+~~~
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+for x, y in soccer. items(): # 서식, 값 동시 출력 함수
+  print(x, y)
+~~~
+~~~
+soccer = {
+    "player":"Messi",
+    "position":"foward",
+    "team":"BARCELONA"
+}
+myplayer = soccer.copy()
+print(myplayer)
+myplayer = dict(soccer)
+print(myplayer)
+~~~
+~~~
+name1 = {"name":"Messi", "team":"BARCELONA", "live":"ARGENTINA"}
+name2 = {"name":"Naymar", "team":"BARCELONA", "live":"BRAZIL"}
+name3 = {"name":"Suarez", "team":"BARCELONA", "live":"ARUGUI"}
+family = {
+    "name1":name1,
+    "name2":name2,
+    "name3":name3
+}
+print(family)
+~~~
