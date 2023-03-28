@@ -143,3 +143,231 @@ result=c*10
 print(a,"전화번호",b,"이름",c,"무게입니다")
 print(c,"*10원",result)
 ~~~
+# 2. print() 서식 출력
+~~~
+print("%d" % 123)
+print("%5d" % 123)
+print("%05d"% 123)
+
+print("%f" % 123.45)
+print("%7.1f" % 123.45)
+print("%7.3f" % 123.45)
+
+print("%s" % "대한민국")
+print("%8s" % "대한민국")
+~~~
+# Format 함수: 순서 지정 가능
+~~~
+print("{0:d} {1:5d} {2:05d}".format(123,456,789))
+print("{2:d} {1:5d} {0:05d}".format(123,456,789))
+~~~
+# 서식 출력
+~~~
+print("\n줄바꿈\n연습중입니다.")
+~~~
+~~~
+print("\t탭키\t연습.")
+~~~
+~~~
+print("글자가 \"강조\"되는 효과1")
+print("글자가 \'강조\'되는 효과2")
+print("역슬레시 3개출력 \\\\\\")
+print(r"\n \t \"\\ \'@를 그대로 출력") #그대로 출력됨.
+~~~
+# 관계 연산자
+~~~
+a, b = 10, 20
+print(a==b, a!=b, a>b, a<b, a>=b, a<=b)
+~~~
+# 논리 연산자
+~~~
+a = 99
+print((a>100) and (a<200))
+print((a>100) or (a<200))
+print(not(a==100))
+~~~
+~~~
+if(123):
+  print("참이면 보입니다.")
+if(0):
+  print("거짓이면 안 보입니다.")
+~~~
+# 숫자 입력 동전 교환 프로그램
+   ( 500원, 100원, 50원, 10원 )
+~~~
+bill, c500, c100, c50, c10 = 0,0,0,0,0
+bill = int(input("숫자를 입력해주세요.:"))
+c500 = bill // 500 
+bill %= 500
+c100 = bill // 100
+bill %= 100
+c50 = bill // 50
+bill %= 50
+c10 = bill // 10
+bill %= 10
+
+print("500원짜리 : %d개"%c500)
+print("100원짜리 : %d개"%c100)
+print("50원짜리 : %d개"%c50)
+print("10원짜리 : %d개"%c10)
+~~~
+# 조건문
+~~~
+a = 10
+if(a<100):
+  print("100보다 작음")
+  print("거짓이면 이문장은 보이지 않음")
+  print("프로그램 끝")
+~~~
+~~~
+a = 100
+if(a<100):
+  print("100보다 작음")
+else :  
+  print("100보다 큼")
+  print("프로그램 끝")
+~~~
+~~~
+a = int(input("정수를 입력하세요.:"))
+if(a%2==0):
+  print("짝수입니다.")
+else:
+  print("홀수입니다.")
+~~~
+~~~
+a=50
+if(a>50):
+  if(a<100):
+    print("50<a<100")
+  else:
+    print("a>100")
+else:
+    print("a<50")
+~~~
+~~~
+fruit = ['사과','배','감','포도']
+fruit.append('딸기')
+if '딸기' in fruit:        #if '딸기' not in fruit:
+  print("딸기가 있습니다.")  # print("딸기가 없습니다.")
+print(fruit)
+~~~
+~~~
+import random
+
+number = []
+for num in range (0,6) :
+  number.append(random.randrange(1,46))
+print("생성된 리스트",number)
+~~~
+# 반복문
+~~~
+for i in range(0,3,1):#시작값,끝값+1
+  print("안녕하세요.")   #print("%d 안녕하세요."%i)
+                         #print(i)
+print("반갑습니다.")
+~~~
+~~~
+for i in range(1,9,1):
+  print("%d " %i, end = "")
+print("\n")
+for i in range(1,9,1):
+  print("%d" %i, end = " ")
+~~~
+~~~
+sum=0
+for i in range(1,11,1):
+  sum = sum + i
+print("1~10까지 합계 :%d" %sum)
+~~~
+# 숫자입력 1부터 입력된 수까지의 합 출력 프로그램
+~~~
+sum,a=0,0
+a=int(input("숫자를 입력하세요:"))
+for i in range(1,a+1,1):
+  sum=sum+i
+print("1~a까지의 합계:%d"%sum)
+~~~
+#중첩  for문
+~~~
+i,j,k=0,0,0
+k = int(input("단수를 입력하세요.:"))
+for i in range(1,10,1):
+  print("%d * %d = %2d"%(k,i,k*i))
+  print(" ")
+~~~
+~~~
+i,j,k=0,0,0
+for i in range(2,10,1):
+  for j in range(1,10,1):
+    print("%d*%d =%2d"%(i,j,i*j))
+    print("")
+~~~
+## 2,3,4,5단 줄바꿔서 출력
+~~~
+i,j,=0,0
+for i in range(2,3,1):
+  for j in range(1,10,1):
+    print("%d*%d =%2d" %(i,j,i*j))
+    print("")
+print("\t")
+i,j,=0,0
+for i in range(3,4,1):
+  for j in range(1,10,1):
+    print("%d*%d =%2d" %(i,j,i*j))
+    print("")
+print("\t")
+i,j,=0,0
+for i in range(4,5,1):
+  for j in range(1,10,1):
+    print("%d*%d =%2d" %(i,j,i*j))
+    print("")
+print("\t")
+i,j,=0,0
+for i in range(5,6,1):
+  for j in range(1,10,1):
+    print("%d*%d =%2d" %(i,j,i*j))
+    print("")
+~~~
+# 3. 자료형
+## 1) 인덱스와 슬라이딩
+~~~
+L = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9]
+print(L[1])
+~~~
+~~~
+L = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9]
+print(L[-1])
+~~~
+~~~
+L = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9]
+print(L[0:9:2])
+~~~
+~~~
+L = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9]
+print(len(L))
+print(L[len(L)-1])
+~~~
+~~~
+L = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9]
+L[0] = 99
+L[9] = '가나다'
+L[1]=[1,2,3]
+print(L)
+print(L[9])
+~~~
+~~~
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a+b
+print(a+b)
+print(c)
+print(a*3)
+~~~
+~~~
+L = [1,2 ,3 ,4 ,5]
+print(L)
+L. append(6) #리스트 뒤 추가
+print(L)
+L. remove(3) #해당 요소값 삭제
+print(L)
+~~~
