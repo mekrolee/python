@@ -704,3 +704,166 @@ for i in range (0,3,1):
 #for i in range [0,3,1]: 
   #print("안녕!")
 ~~~
+~~~
+for i in range(0,3,1):
+  for j in range(0,2,1):
+    print("i:%d, j:%d"%(i,j))
+~~~
+~~~
+i,j= 0,0
+for i in range(2,10,1):
+  for j in range(1,10,1):
+    print(" %d x %d =%2d " %(i,j,i*j), end="")
+  print("")
+~~~
+~~~
+i = 0
+while i < 3:
+  print("%d : while문"%i)
+  i = i+1
+~~~
+1~10 까지의 합계 구하기 while문, for문
+~~~
+i,hap = 0,0
+i = 1
+while i < 11:
+  i = i + 1
+  hap = hap + i
+print("1~10까지의 합계: %d"%hap)
+~~~
+~~~
+i, hap = 0,0
+i = 1
+for i in range(1,11,1):
+  hap = hap + i
+print("1~10까지의 합계: %d"%hap)
+~~~
+~~~
+# while True:
+print("무한루프", end='')
+~~~
+~~~
+# break
+for i in range(1,100):
+  print("for문 %d번 실행"%i)
+  break
+  print("break 빠짐")
+~~~
+~~~
+hap = 0
+a,b =0,0
+while True:
+  a = int(input("덧셈 첫번째 수 입력:"))
+  if a == 0:
+    break
+  b = int(input("덧셈 두번째 수 입력: "))
+  if a+b:
+    print("%d + %d = %d"%(a, b, hap))
+print("break로 탈출")
+~~~
+~~~
+# continue
+hap, i = 0,0
+for i in range(1,10):
+  if i %2 == 0:
+    print("i:%d"%i)
+    continue
+  hap += i
+print("1~10까지의 합계(2의 배수 제외):%d"%hap)
+~~~
+~~~
+fruits = ["사과","배","체리"]
+for x in fruits:
+  if x == "배":
+    continue
+  print(x)
+~~~
+~~~
+for x in range(5):
+  print(x)
+else:
+  print("끝")
+~~~
+~~~
+for x in range(5):
+  if x == 3:
+    break
+  print(x)
+else:
+  print("끝")
+~~~
+~~~
+# for문 형식은 비워두기 불가능.
+for x in [0,1,2]:
+  pass
+~~~
+### 함수
+~~~
+# 더하기 함수
+def plus (v1, v2):
+  result = 0
+  result = v1 + v2
+  return result
+
+hap = 0
+hap = plus(10,20)
+print("10+20 plus() 처리 결과: %d" %hap)
+~~~
+~~~
+# 계산 코드
+def calc (v2,v1,op):
+  result = 0
+  if op == '+':
+    result = v1 + v2
+  elif op == '-':
+    result = v1 - v2
+  elif op == '*':
+    result = v1 * v2
+  elif op == '/':
+    result = v1 / v2
+  return result
+
+rst = 0
+var1,var2,opr = 0,0,""
+opr = input("계산코드 입력: ")
+var1 = int(input("첫번째 수 입력: "))
+var2 = int(input("두번째 수 입력: "))
+rst = calc(var1,var2,opr)
+print("계산기 %d %s %d : %d "%(var1,opr,var2,rst))
+~~~
+# 0 나누기= 메시지 출력
+# 제곱 연산 추가
+# 숫자1,숫자2,연산자 계산기 만들기
+~~~
+def calc (v2,v1,op):
+  result = 0
+  if op == '+':
+    result = v1 + v2
+  elif op == '-':
+    result = v1 - v2
+  elif op == '*':
+    result = v1 * v2
+  elif op == '/':
+    result = v1 / v2
+  elif op == '**':
+    result = v1 ** v2
+  return result
+
+rst = 0
+var1,var2,opr = 0,0,""
+opr = input("계산코드 입력: ")
+var1 = int(input("첫번째 수 입력: "))
+var2 = int(input("두번째 수 입력: "))
+rst = calc(var1,var2,opr)
+print("계산기 %d %s %d : %d "%(var1,opr,var2,rst))
+~~~
+~~~
+def func1():
+  a = 10            # 지역변수
+  print("func1()에서 값 : %d"%a)
+def func2():
+  print("func2()에서 a값: %d"%a)
+a = 20              # 전역변수
+func1()
+func2()
+~~~
