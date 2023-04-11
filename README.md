@@ -627,3 +627,80 @@ family = {
 }
 print(family)
 ~~~
+# 4. 조건문, 반복문
+## 중첩 if문
+~~~
+score = int( input("점수를 입력해 주세요: "))
+
+if(score > 100):
+  print("0~100까지의 수를 입력하셔요") 
+else:
+  if(score >= 90):
+    print("A")
+  elif(score >= 80):
+    print("B")
+  elif(score >= 70):
+    print("C")
+  elif(score >=60):
+    print("D")
+  else:
+    print("F")
+  print ("학점입니다.")
+  ~~~
+  ~~~
+  score = int( input("점수를 입력해 주세요: "))
+
+if(score > 100):
+  print("0~100까지의 수를 입력하셔요") 
+else:
+  if(score >= 90):
+    print("점수: %3d A" %score)
+  elif(score >= 80):
+    print("점수: %3d B" %score)
+  elif(score >= 70):
+    print("점수: %3d C" %score)
+  elif(score >=60):
+    print("점수: %3d D" %score)
+  else:
+    print("점수: %3d F" %score)
+  print ("학점입니다.")
+  # print ("학점, 점수: %3d" %score)
+  ~~~
+  ~~~
+  import random
+numbers = []
+for num in range(0,10):
+  numbers.append(random.randrange(0,10))
+print("생성된 리스트", numbers)
+for num in range(0,10):
+  if num not in numbers:
+  #if num in numbers:
+   # print("숫자 %d는 리스트에 있습니다."%num)
+    print("숫지 %d는 리스트에 없습니다."%num)
+  else:
+    print("숫자 %d는 리스트에 있습니다."%num)
+ ~~~
+ ~~~
+ select, answer, numStr, num1, num2 = 0,0,"",0,0
+select = int(input("1.입력한 수식 계산 2. 두수의 합계:"))
+if select == 1:
+  numStr = input("★★★ 수식을 입력하세요 :")
+  answer = eval(numStr) # 1+2, "string"+"Str"
+  print("%s 결과는 %5.1f입니다."%(numStr,answer))
+elif select == 2:
+  num1= int(input("★★★ 첫번쨰 숫자를 입력하세요:"))
+  num2= int(input("★★★ 두번쨰 숫자를 입력하세요:"))
+  for i in range(num1,num2+1):
+    answer = answer+i
+  print("%d+...+%d는 %d입니다."%(num1,num2,answer))
+else:
+  print("1또는 2만 입력해야 합니다.")
+~~~
+## for,while 반복문
+~~~
+for i in range (0,3,1):
+  print("안녕!")
+  # type error
+#for i in range [0,3,1]: 
+  #print("안녕!")
+~~~
