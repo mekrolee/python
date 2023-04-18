@@ -981,4 +981,85 @@ os.rename("b.txt","a.txt")
 print(os.listdir('.'))
 ~~~
 ~~~
+from google.colab import files  # 파일 다운로드
+import os
+print(os.path.exists('a.txt'))  # a.txt 파일 유무
+print(os.path.exists('b.txt'))  # b. txt 파일 유무
+~~~
+~~~
+# 구구단 파일로 저장
+from google.colab import files  # 파일 다운로드
+import sys
+f = open("a.txt",'w')
+sys.stdout = f
+for i in range(2,10):
+  for j in range(1,10):
+    print("{} x {} = {}".format(i, j, i*j))
+  print()
+f.close()
+~~~
+~~~
+f = open("c.txt",'w',encoding='utf8')
+f.write("동해물과 백두산이 마르고 닳도록\n안녕하세요.\nHELLO WORLD")
+f.close()
+
+f.open("c.txt",'r',encoding='utf8')
+lines = f.readlines()
+for line in lines:
+  print(line, end='')
+f.close()
+~~~
+~~~
+y = int(input("줄 수 입력하세요."))
+x = int(y/2)+1
+
+for i in range(1,2*x):
+  if(i <= x):
+    for j in range(x-i):
+      print("",end='')
+    for j in range(2*i-1):
+      print("@",end='')
+    for j in range(i-x):
+      print("",end='')
+    for j in range((2*x-i)*2-1):
+      print("@", end='')
+    print()
+~~~
+~~~
+for i in range(5):
+  print('@', end='')
+print("")
+
+for i in range(i+1):
+  print('@', end='')
+print("")
+~~~
+~~~
+x = int(input("줄수 입력:"))
+for i in range(1,x+1):
+  for j in range(i):
+    print("@",end='')
+  print()
+
+def starw(i):
+  if i == 6:
+    return
+  print("@"*i)
+  i = i+1
+  starw(i)
+starw(1)
+"""
+@
+@@
+@@@
+@@@@
+@@@@@
+"""
+"""
+*****
+****
+***
+**
+*
+"""
 ~~~
