@@ -867,3 +867,118 @@ a = 20              # 전역변수
 func1()
 func2()
 ~~~
+# 5. 파일 처리
+"r" = read  
+"a" = append  
+"w" = write  
+"x" = create  
+"t" = text  
+"b" = binary  
+~~~
+# w
+from google.colab import files  # 파일 다운로드
+
+f = open("a.txt",'w')
+f.write("12345")
+f.close()
+
+f = open("a.txt",'w')
+f.write("abcde")
+f.close()
+
+files.download('a.txt')         # 파일 다운로드
+~~~
+~~~
+from google.colab import files  # 파일 다운로드
+
+f = open("a.txt",'w')
+f.write("12345")
+f.close()
+
+f = open("a.txt",'a')       # 추가
+f.write("6789")
+f.close()
+
+files.download('a.txt')         # 파일 다운로드
+~~~
+~~~
+from google.colab import files  # 파일 다운로드
+
+f = open("b.txt",'x')         # 생성 파일 존재x → 정상작동
+                                  # 새로운 파일시 정상작동
+f.write("abcde")
+f.close()
+
+files.download('b.txt')         # 파일 다운로드
+~~~
+~~~
+# 여러줄 내용 입력
+from google.colab import files  # 파일 다운로드
+
+f = open("a.txt",'w')
+f.write("""1234
+4567
+890""")       # \n 역할 = """a b c"""
+#f.write("123456789\n987654321\nabcde\nedcba")
+f.close()
+
+files.download('a.txt')         # 파일 다운로드
+~~~
+~~~
+# 리스트, 튜플 내용 입력
+from google.colab import files  # 파일 다운로드
+
+t = ("1","2","3","4","5","\n")
+i = ["a","b","c","d","e"]
+f = open("a.txt",'w')
+f.writelines(t)
+f.writelines(i)
+f.close
+
+files.download('a.txt')         # 파일 다운로드
+~~~
+~~~
+# read 모드로 파일 열기
+from google.colab import files  # 파일 다운로드
+
+f = open("a.txt",'w')
+f.write("1234")
+f.close()
+
+f = open("a.txt",'r')
+print(f.read())
+f.close()
+
+files.download('a.txt')         # 파일 다운로드
+~~~
+~~~
+# readlines() 함수 = 한줄씩 가져옴
+f = open("a.txt",'w')
+f.write("1234\nabcd")
+f.close()
+
+f = open("a.txt",'r')
+print(f.readline())
+print(f.readline())
+f.close()
+~~~
+~~~
+from google.colab import files  # 파일 다운로드
+
+import os
+if os.path.exists("a.txt"):
+  os.remove("a.txt") # 파일지움
+# os.rmdir("a.txt")
+  # os.rmdir("a.txt") 폴더 지움
+else:
+  print("파일이 없음")
+~~~
+~~~
+from google.colab import files  # 파일 다운로드
+import os
+print(os.listdir('.'))
+os.rename("b.txt","a.txt")
+print(os.listdir('.'))
+~~~
+~~~
+~~~
