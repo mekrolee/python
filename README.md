@@ -1049,3 +1049,66 @@ def starw(i):
   starw(i)
 starw(1)
 ~~~
+~~~
+def add(a,b):
+  print("a+b")        # 정상 작동
+x=add(10,20)
+print(x)              # none
+
+def addr(a,b):
+  return a+b
+y=addr(10,20)
+print(y)              # 정상 작동
+~~~
+~~~
+from tkinter import *
+window = Tk()
+window.title("윈도우 창 연습")     # 제목 정의
+window.geometry("400x400")         # 사이즈 정의
+window.resizable(width=FALSE, height=FALSE) # 마우스 지정 X
+window.resizable(width=TRUE, height=TRUE) # 마우스 지정 O
+window.mainloop()
+~~~
+~~~
+from tkinter import*
+window = Tk()
+Label1 = Label(window,text="안녕하세요")
+Label2 = Label(window,text="파이썬", front=("궁서체",10),fg = "blue")
+Label3 = Label(window,text="Love is ",bg="red",width=10, height=5, anchor=2)
+Label1.pack()
+Label2.pack()
+Label3,pack()
+
+window.mainloop()
+~~~
+~~~
+# 사진 올리기
+from tkinter import*
+window = Tk()
+photo = photoImage(file=파일저장위치)   # 사진 저장 퍼오기
+Label1 = Label(window,image=photo)   # 사진
+Label.pack(side=LEFT) #좌우 배치
+Label.pack(side=RIGHT) # 좌우 배치
+window.mainloop()
+~~~
+~~~
+ # 버튼 만들기
+from tkinter import*
+window = Tk()
+button1 = button(tk, text = "파이썬 종료", fg = "red", command = quit) 
+button1.pack()
+tk.mainloop()
+~~~
+~~~
+# 버튼과 사진 동시 만들기
+from tkinter import
+from tkinter import messagebox
+def myfunc():
+  messagebox.showinfo("개 버튼","개가 짖어요")
+tk = Tk()
+photo = photoimage(file="파일저장위치")
+# button = button(tk, text = "파이썬 종료", fg = "blue", command = quit)
+button1 = button(tk, image=photo, command = myfunc)
+button.pack()
+tk.mainloop()
+~~~
