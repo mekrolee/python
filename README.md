@@ -1112,3 +1112,17 @@ button1 = button(tk, image=photo, command = myfunc)
 button.pack()
 tk.mainloop()
 ~~~
+# 기말
+~~~
+< !DOCTYPE html>
+<html>
+ <head> HTML basic </head>
+ <body>
+   <h1>헤딩 h1</h1>
+   <h2>헤딩 h2</h2>
+   <h3>헤딩 h3</h3>
+   <h4>헤딩 h4</h4>
+   <p>선언 !DOCTYPE은 문서 유형을 나타내며 브라우저가 <br/>을 사용하여 나타냄
+ </body>
+</heml>
+~~~
