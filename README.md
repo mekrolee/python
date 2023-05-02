@@ -1126,3 +1126,38 @@ tk.mainloop()
  </body>
 </heml>
 ~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"
+  <meta name="viewport" content="wudth=device=width,
+  <title>Style</title>
+</head>
+<body>
+  <h1 style = "color: red;>" red color</h1>
+  <p style="background-color: yellow;>"css color</p>
+  <p style="font-size: 100%;>문장 나타내는 p태그</p>
+  <!--      여러줄
+  -->       주석 처리
+</body>
+</html>
+~~~
+~~~
+<h1 style="background-color: rgb(255,0,0);>rgh(255,0,0)</h1>         red
+<h2 style="background-color: rgb(255,255,0);>rgh(255,255,0)</h2>     yellow
+<h3 style="background-color: rgb(0,255,0);>rgh(0,255,0)</h3>          green
+<h4 style="background-color: rgb(0,0,255);>rgh(0,0,255)</h4>         blue
+<h5 style="background-color: rgb(255,255,255);>rgh(255,255,255)</h5>   white
+<h6 style="background-color: rgb(0,0,0);>rgh(0,0,0)</h6>              black
+<h7 style="background-color: #ee82ee);">#ee82ee</h7>                  pink
+~~~
+~~~
+<h1>과일</h1>
+  <ul>
+    <li>과일</li>
+    <li>과일</li>
+    <li>과일</li>
+  </ul>
+~~~
