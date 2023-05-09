@@ -1282,9 +1282,13 @@ tk.mainloop()
         .select2{
             color: red;
         }
+                .item{color:green;}
+        .header{background-color:yellow;}
+        #.header{background-color:rgb(250,10,20);}
     </style>
 </head>
 <body>
+    <h1 class="item header">좋아하는 과일은?</h1>
     <u1>
         <li class="select">배</li>
         <li class="select1">포도</li>
@@ -1294,6 +1298,221 @@ tk.mainloop()
 </html>
 ~~~
 ~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descendent css selectro</title>
+    <style>
+        #header h1, h2{color: aqua;}
+        #section h1,#section h2{color: red;}
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">타이틀</h1>
+        <div id="nav">
+           <h1>네비게이션</h1>
+           <h2>후손적용가능?</h2>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">컨텐츠</h1>
+        <h2>후손적용가능?</h2>
+        <p>로렘 입숨 사이트 정보</p>
+    </div>
+</body>
+</html>
 ~~~
 ~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desc Table</title>
+    <style>
+      .color_r{ color: red;}
+      .color_b{ color: balck;}
+</head>
+<body>
+   <table border = "1">                                      # table → 태그에 style 적용 x
+        <tr>
+            <th class="color_r">이름</th>
+            <th class="color_b">나라</th>
+        </tr>
+        <tr>
+            <td>지뉴</td>
+            <td>브라질</td>
+        </tr>
+        <tr>
+            <td>피를로</td>
+            <td>이탈리아</td>
+        </tr>
+    </table>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        div{                                        # 박스모양 꽉참
+            width: 100px; height: 100px; 
+            background-color: aqua;
+            border: 20px solid blue;
+            margin: 0 10px; padding: 0 30px;
+        }
+        .box{border-width: thick;                  # 박스 모양 점밖이
+             border-style: dashed;
+             border-color: red;
+             margin: 20px; padding: 20px;
+             border-radius: 20px 20px;              # 모따기
+            }
+    </style>
+</head>
+<body>
+    <div class="box"><p>아쿠아리움에 오신걸 환영합니다.~</p></div>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css font size</title>
+    <style>
+        .a{font-size: large;}
+        .b{font-size: small;}
+        .c{font-size: 18px;}
+        .d{font-size: 2em; font-style: italic;}
+    </style>
+</head>
+<body>
+    <h1>Lorem Ipsum</h1>
+    <p class="a">Lorem Ipsum</p>
+    <p class="b">Lorem Ipsum</p>
+    <p class="c">Lorem Ipsum</p>
+    <p class="d">Lorem Ipsum</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        .f_big{font-size: 2em;}
+        .f_italic{font-style: italic;}
+        .f_bold{font-weight: bold;}
+        .f_center{text-align: center;}
+        .button{
+            width:160px; height: 80px;
+            background-color: aqua;
+            border: 10px solid black;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #a9a9a9;
+        }
+        .button > a{ display: block; line-height: 80px}
+    </style>
+</head>
+<body>
+    <div class="button">
+        <a href="https://www.naver.com/" class="f_big f_italic f_bold f_center">click</a>
+    </div>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .box{
+            width: 200px; height: 200px;
+            position: absolute;
+        }
+        .box:nth-child(1){
+            background-color: aqua;
+            left: 10px; top: 10px;
+            z-index: 10;}
+        .box:nth-child(2){
+            background-color: blue;
+            left: 20px; top: 20px;
+            z-index: 5;}
+        .box:nth-child(3){
+            background-color: green;
+            left: 30px; top: 30px;
+            z-index:1;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        img{float: left; width: 20px; height: 20px;}
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="logo">
+    <p>로렘입솜정보1</p>
+    <p>로렘입솜정보2</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        .box{
+            width:200px; height: 200px;
+            background-color: aqua;
+            margin: 10px; padding:10px;
+            float :left;                     #세로 정렬(1,2) 
+           #float :light                     #세로 정렬(2,1)
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+</body>
+</html>
 ~~~
