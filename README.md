@@ -1161,3 +1161,139 @@ tk.mainloop()
     <li>과일</li>
   </ul>
 ~~~
+# css
+## 전체 선택자
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Wildcard selector</title>
+    <style>*{color: red;}</style>                     # 전체 빨간색
+</head>
+<body>
+    <h1>로렘임숨이란?</h1>
+    <h2>https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%A0%98_%EC%9E%85%EC%88%A8</h2>
+    <p>Lorem Ipsum은 단순히 인쇄 및 조판 업계의 더미 텍</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Wildcard selector</title>
+    <style>*{background-color: gainsboro;}       # 바탕은 회색
+     h1{color: red;}                             # h1은 빨간색 
+     p{color:yellow;}</style>                    # p는 노란색
+             
+</head>
+<body>
+    <h1>로렘임숨이란?</h1>
+    <h2>https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%A0%98_%EC%9E%85%EC%88%A8</h2>
+    <p>Lorem Ipsum은 단순히 인쇄 및 조판 업계의 더미 텍</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Wildcard selector</title>
+    <style>*{background-color: gainsboro;}
+     h1{color: red;}
+     p{color:yellow;}
+     body,h1,p,h3{margin: 50; padding: 0;}</style>     # 결과창 문장과 문장 사이의 거리 표시
+             
+</head>
+<body>
+    <h1>로렘임숨이란?</h1>
+    <p>https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%A0%98_%EC%9E%85%EC%88%A8</p>
+    <br>                              # 한칸 띄는 결과 표시
+    <h3>게 어디서 났니?</h3>
+    <p>Lorem Ipsum은 단순히 인쇄 및 조판 업계의 더미 텍</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ID selector</title>
+    <style>
+        #header{
+            width: 800px; margin: 0 auto;
+            background-color: green;
+        }
+        #wrap{
+            width: 800px; margin: 0 auto;
+            overflow: hidden;
+        }
+        #aside{
+            width: 200px; float: left;
+            background-color: aqua;
+        }
+        #content{
+            width: 600px; float: left;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+  <div id="header">
+    <h1>#header 태그</h1>
+  </div>
+  <div id="wrap">
+    <div id="aside">  
+    <h1>#aside 태그</h1>
+    </div>
+    <div id="content">
+    <h1>#content 태그</h1>
+    </div>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ID selector</title>
+    <style>
+        .select{
+            color: cyan;
+        }
+        .select1{
+            color: blue;
+        }
+        .select2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <u1>
+        <li class="select">배</li>
+        <li class="select1">포도</li>
+        <li class="select2">감</li>
+    </u1>
+</body>
+</html>
+~~~
+~~~
+~~~
+~~~
+~~~
