@@ -1632,3 +1632,63 @@ print(href,'\n')
 text = a_tag.text
 print(text)
 ~~~
+# 인구 통계 자료
+~~~
+import pandas as pd
+url = "http://stat.paju.go.kr/index.do"
+~~~
+~~~
+table = pd.read_html(url)  # 자료에 표 존재시 작성
+len(table)
+~~~
+~~~
+import seaborn as sb
+import matplotlib.font_manager as fm
+sb.set( font="nanumgothic")
+#sb.set(font="applegothic")
+~~~
+~~~
+# 한글 다운로드(런타임 다시 시작)
+! sudo apt-get install -y fonts0nanum
+!sudo fc-cache -fv
+!rm ~/.cache/matplotlib -rf
+~~~
+~~~
+sys_font=fm.findSystemFonts()
+print(f"sys_font number: {len(sys_font)}")
+nanum_font = { f for f in sys_font if 'nanum' in f}
+print(f"nanum_font number:{len(nanum_font)}")
+~~~
+~~~
+fontbath='복사주소'
+font = fm.Fontproperties(fname=fontbath,size=10)
+~~~
+~~~
+import matplotlib.font_manager as fm
+fontpath = '복사주소'
+font = fm.fontproperties(fname=fontpath,size=10)
+~~~
+~~~
+# 기본글꼴 변경
+import matplotlib as mp
+#mp.font_manager.rebuild()
+mp.pyplot.rc('font',family='nanumgothic')
+~~~
+~~~
+# 시각화
+import seaborn as sb
+import matplotlib.font_manager as fm
+fontpath = '복사 주소'
+font = fm.FontProproperties( fname=fontpath,size=10).get_name()
+#plt.rc('font',family=font)
+sb.set(font="NanumGothic")
+~~~
+#기상청 데이터 가져오기
+~~~
+# 디코딩 키 사용
+import requests
+url = '복사 주소'# 기상청 데이터 주소
+params = {'serviceKey':'복사 주소'} #값 주소
+response = requests.get(url, params=params)
+print(response.content)
+~~~
