@@ -1516,3 +1516,119 @@ tk.mainloop()
 </body>
 </html>
 ~~~
+#엑셀 파일 만들고 저장
+~~~
+f = open("저장위치")
+s = f.readline()
+print(s,end="")
+s = f.readline()
+print(s,end="")
+f.close()
+~~~
+~~~
+def printlist(plist):
+    for data in plist:
+        print(data,end="\t")
+    print()
+with open("저장위치",'r') as f:
+    header = f.readline()
+    header = header.strip()
+    for s in f:
+        s = s.strip() 
+        rowlist = s.split(',')
+        printlist(rowlist)
+~~~
+~~~
+with open("저장위치",'r') as f:
+    with open("저장위치",'w') as fs:
+        h = f.readline()
+        h = h.strip()
+        hlist = h.split(',')
+        idx1 = hlist.index('id')
+        idx2 = hlist.index('passwoed')
+        hlist = [hlist[idx1],hlist[idx2]]
+        hstr = ','.join(map(str,hlist))
+        fs.write (hstr +'\n')
+        for s in f:
+            s = s.strip()
+            rstr = s.split(',')
+            if int(rlist[idx1]) >= 165:
+                rlist = [rlist[idx2],rlist[idx1]]
+                rstr = ','.join(map(str,rlist))
+                fs.write(rstr+'\n')
+print('save ok!')
+~~~
+~~~
+from tkinter import *
+tk = Tk()
+counter = 0
+def clicked():
+    global counter
+    counter += 1
+    label1['text'] = 'button click num' + str(counter)
+def reset():
+    global counter
+    counter = 0
+    label1['text'] = 'butoon go'
+tk.tktitle('gul 카운터')
+label1 = Label(tk, text ='button go', fg = 'blue', font =20)
+label1.pack( side = LEFT, padx =10, pady =10)
+button1 = Button(tk, text = 'go to click',
+                       bg = 'green', font=15, width=30, height=5, command=clicked)
+button1.pack( side = LEFT, padx =10, pady =10)
+button2 = Button(tk, text = 'reset', 
+                      bg = 'red', font=15, width=30, height=5, command=reset)
+button2.pack( side = LEFT, padx =10, pady =10)
+tk.mainloop()
+~~~
+~~~
+import urllib.request
+url = "https://www.naver.com"
+res = urllib.request.urlopen(url)
+html = res.read()
+print(html)
+~~~
+~~~
+import urllib.request
+import bs4
+url = "https://www.naver.com"
+res = urllib.request.urlopen(url)
+bsobject = bs4.beautifulsoup(res,'html.parser')
+print(bsobject)
+~~~
+~~~
+import urllib.request
+import bs4
+url = "https://www.naver.com"
+res = urllib.request.urlopen(url)
+bsobject = bs4.beautifulsoup(res,'html.parser')
+tag_div = bsobject.find('div')
+print(tag_div)
+~~~
+~~~
+import urllib.request
+import bs4
+url = "https://www.naver.com"
+res = urllib.request.urlopen(url)
+bsobject = bs4.beautifulsoup(res,'html.parser')
+tag_div = bsobject.find('div')
+print(tag_div)
+tag_id = tag_div.findALL('news-area')
+print(tag_id)
+~~~
+~~~
+import urllib.request
+import bs4
+url = "https://www.naver.com"
+res = urllib.request.urlopen(url)
+html = res.read()
+bsobject = bs4.beautifulsoup(res,'html.parser')
+tag = bsobject.find('div', {'id':'naverci'})
+print(tag, '\n')
+a_tag = tag.find("a")
+print(a_tag,'\n')
+href = a_tag['href']
+print(href,'\n')
+text = a_tag.text
+print(text)
+~~~
