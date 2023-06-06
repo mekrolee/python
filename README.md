@@ -1692,3 +1692,27 @@ params = {'serviceKey':'복사 주소'} #값 주소
 response = requests.get(url, params=params)
 print(response.content)
 ~~~
+# 전라북도 군산시 횡단보도 공공데이터 불러오기 
+~~~
+import requests
+import pprint
+import json
+
+url = "https://apis.data.go.kr/6450000/crosswalks/getcrosswalks?serviceKey=7dFOuqhAJcp1Vw6yc7CnghjNmg75zQNfCy2SpZDSr%2FsSyFPMj7VdbGYJt78fzVkvDvEV02ElaqsJo0gGElMgpA%3D%3D&numOfRows=10&pageNo=0&sortKey=roadNm&filterKey=roadNm&filterValues=%EC%83%88%EB%A7%8C%EA%B8%88%EB%B6%81%EB%A1%9C&type=json"
+
+response = requests.get(url)
+contents = response.text
+pp = pprint.PrettyPrinter(indent=4)
+print(pp.pprint(contents))
+json_ob = json.loads(contents)
+print(json_ob)
+print(type(json_ob))
+body = json_ob['items']
+print(body)
+
+import pandas as pd
+from pandas.io.json import json_normalize
+dataframe = json_normalize(body)
+print(dataframe)
+dataframe.to_csv('과속방지턱.csv',index=False)
+~~~
